@@ -2,19 +2,23 @@
 
 int main(){
 
-// Desafio nivel Novato --> Super Trunfo em C:
+// Desafio nivel Aventureiro --> Super Trunfo em C:
 
 
 
 // Carta Número 1
 
-    char estado;
+    char estado[50];
     char codigo_da_carta[50];
     char nome_da_cidade[50];
     int populacao;
     float area_em_km;
     float pib;
     int numeros_de_pontos_turisticos;
+    float densidade_populacao;
+    float pib_per_capita;
+    float media1 ,media2,media3,media4; 
+
 
 
 // Carta Número 2
@@ -26,8 +30,12 @@ int main(){
     float area_em_km2;
     float pib2;
     int numeros_de_pontos_turisticos2;
+    float densidade_populacao2;
+    float pib_per_capita2;
 
 // Dados da Carta 1
+      printf("INSIRA OS DADOS DA CIDADE 1 \n");
+
 
     printf("Digite sua Estado :");
     scanf("%s", &estado);
@@ -44,6 +52,13 @@ int main(){
     printf("Quantidade de Pontos Turísticos na Cidade: ");
     scanf("%d", &numeros_de_pontos_turisticos);
 
+    media1 = (populacao / area_em_km);
+    printf("Resultado da Densidade Populacional : %.2f\n", media1);
+    media2 = (pib / populacao);
+    printf("Resultado PIB per Capita : %.2f\n\n", media2);
+
+
+    
     printf("DADOS DA CIDADE 1 FINALIZADO!!\n\n\n\n");
 
 
@@ -70,6 +85,11 @@ int main(){
     scanf("%f", &pib2);
     printf("Quantidade de Pontos Turísticos na Cidade: ");
     scanf("%d", &numeros_de_pontos_turisticos2);
+
+    media3 = (populacao2 / area_em_km2);
+    printf("Resultado da Densidade Populacional : %.2f\n", media3);
+    media4 = (pib2 / populacao2);
+    printf("Resultado do PIB per Capita : %.2f\n\n", media4);
 
 
 
